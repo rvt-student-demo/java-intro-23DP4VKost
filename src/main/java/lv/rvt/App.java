@@ -13,9 +13,12 @@ public class App
         //boolean trueOrFalse = Boolean.valueOf(scanner.nextLine()); t/f    
 
         Scanner scanner = new Scanner(System.in);
-        int integer = Integer.valueOf(scanner.nextLine());
-         for(;integer <= 100; integer++){
-            System.out.println(integer);
-         }
+        int factorial = 1;
+        int num = Integer.valueOf(scanner.nextLine());
+        for ( int i = 1; i <= num; i++) {
+            factorial *= i;
+            
+        }
+    System.out.println(factorial);
 }
 }
