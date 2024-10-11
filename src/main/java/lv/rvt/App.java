@@ -39,7 +39,7 @@ while (true) {
         }
     }
 }
-double average = sum/count;
+double average = (double)sum / (double) count;
 System.out.println("Thx! Bye!");
 System.out.println("Sum: " + sum);
 System.out.println("Numbers: " + count);
