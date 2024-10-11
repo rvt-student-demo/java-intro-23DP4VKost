@@ -25,17 +25,21 @@ while (true) {
     int number = Integer.valueOf(scanner.nextLine());
     if (number == -1) {
         break;
-    } else {
+     } 
+    
+    else {
         sum += number;
         count++;
-        if (number % 2 == 0) {
-            even++;
-        } else {
+            if (number % 2 == 0) {
+                even++;
+            } 
+
+         else {
             odd++;
         }
     }
 }
-int average = sum/count;
+double average = sum/count;
 System.out.println("Thx! Bye!");
 System.out.println("Sum: " + sum);
 System.out.println("Numbers: " + count);
