@@ -23,10 +23,11 @@ public class App
 public static void divisibleByThreeInRange(int min , int max)
     {
         while(min<=max){
-            System.out.println(min);
-            min = min + 3;
+            if(min % 3 == 0){
+                System.out.println(min);
+                min = min + 3;
         }
-
+    }
     }
 
 }
