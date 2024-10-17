@@ -13,21 +13,21 @@ public class App
         //boolean trueOrFalse = Boolean.valueOf(scanner.nextLine()); t/f  
 
 //My main method
-        
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("How many times?");
-        int integer = Integer.valueOf(scanner.nextLine());
-        int check = 0;
-        while(check < integer){
-            printText();
-            check = check + 1;
+    Scanner scanner = new Scanner(System.in);
+    int min = Integer.valueOf(scanner.nextLine());
+    int max = Integer.valueOf(scanner.nextLine());
+    divisibleByThreeInRange(min , max);
     }
+   
+    
+public static void divisibleByThreeInRange(int min , int max)
+    {
+        while(min<=max){
+            System.out.println(min);
+            min = min + 3;
+        }
+
     }
-    
-    
-public static void printText() {
-    System.out.println("In a hole in the ground there lived a method.");
-}
 
 }
 
