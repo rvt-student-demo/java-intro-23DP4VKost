@@ -12,81 +12,58 @@ public class App
         //double floatingPoint = Double.valueOf(scanner.nextLine()); decimal no user
         //boolean trueOrFalse = Boolean.valueOf(scanner.nextLine()); t/f  
 
-
-
-   printStars(5);
-   printStars(3);
-   printStars(9);
-    space();
-   printSquare(4);
-   space();
-   printRectangle(17,3);
-   space();
-   printTriangle(4);
-}
-///space
-public static void space(){
-    System.out.println("");
-}
-
-///1.
-public static void printStars(int star)
-{
-
-for(int i = 0;i < star;i++){
-    System.out.print("*");
-}
-    System.out.println("");
-
-
-}
-
-///2.
-public static void printSquare(int size)
-{
-
-for(int table = 0; table < size;table++){
-
-for(int i = 0;i < size;i++){
-    System.out.print("*");
-}
-    System.out.println("");
-
-}
-}
-
-///3.
-
-public static void printRectangle(int width , int heigth)
-{
-
-for(int h = 0;h<heigth;h++){
-
-for(int i = 0;i < width;i++){
-    System.out.print("*");
-}
-    System.out.println("");
-}
-
-}
-
-///4.
-public static void printTriangle(int size)
- {
-
-for (int x = 0; x <= size; x++)
-    {
-        for (int i = 0; i < x; i++)
-        {
-            System.out.print("*");
-        }
+        printSpaces(1);
         System.out.println("");
 
+        printTriangleReverse(4);
+        System.out.println("");
 
+        christmasTree(4);
+        System.out.println("");
+
+        christmasTree(10);
     }
- }
 
+public static void printSpaces(int number) {
+        for(int i = 0; i < number ; i++){
+            System.out.print(" ");
+        }
+}
+
+public static void printStars(int number) {
+                for(int i = 0; i < number; i++){
+                    System.out.print("*");
+                } System.out.println("");
+            }
+
+
+public static void printTriangleReverse(int size) {
+    int i = 0;
+    int j = size-1;
+     while(i < size && j >= 0){
+        printSpaces(j);
+        printStars(i);
+        i++;
+        j--;
+            }
 }
 
 
-
+public static void christmasTree(int height) {
+    int x = 1;
+    int y = height-1;
+        while(y >= 0){
+            printSpaces(y);
+            printStars(x);
+            x=x+2;
+            y--;
+        
+            if (y==-1){
+              printSpaces(height-2);
+              System.out.println("***");
+              printSpaces(height-2);
+              System.out.println("***");
+                    }
+                }
+            }
+        }
