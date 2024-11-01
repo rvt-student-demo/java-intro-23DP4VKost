@@ -7,25 +7,41 @@ public class App
     
      
     public static void main( String[] args ){
- 
-        int[] val = {0, 1, 2, 3}; 
-        int temp;
-     
-        System.out.println( "Original Array: " 
-            + val[0] + " " + val[1] + " " + val[2] + " " + val[3] );
-        
-        for(int i =0;i < val.length/2;i++){
-             temp = val[i];
-             val[i] = val[val.length-1-i];
-             val[val.length-i-1] = temp;
-        }
+            Scanner scanner = new Scanner(System.in);
+            ArrayList<String> names = new ArrayList<>();
+            ArrayList<Integer> births = new ArrayList<>();
+
+            while (true) {
+                String nameBirthInput = scanner.nextLine();
+                if (nameBirthInput.isEmpty()) {
+                    break; 
+                }
+                String[] parts = nameBirthInput.split(",");
+                String name = parts[0];
+                int birthYear = Integer.parseInt(parts[1]);
+
+                names.add(name);
+                births.add(birthYear);
+                
+            }
 
 
-        
-        System.out.println( "Reversed Array: " 
-            + val[0] + " " + val[1] + " " + val[2] + " " + val[3] );
-    
-    }
- 
+            String longestName = "";
+            for (String name : names) {
+                if (name.length() > longestName.length()) {
+                    longestName = name;
+                }
+            }
+
+            int sum = 0;
+            for (int year : births) {
+                sum += year;
+            }
+
+            double averageBirthYear = sum / (double) births.size();
+            System.out.println("Longest name: " + longestName);
+            System.out.println("Average of the birth years: " + averageBirthYear);
+          
+}
 }
 
