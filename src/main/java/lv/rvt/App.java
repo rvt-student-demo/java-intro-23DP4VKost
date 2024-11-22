@@ -5,31 +5,20 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
 
-    Scanner scanner = new Scanner(System.in);
 
-    PaymentCard paulCard = new PaymentCard(20);
-    PaymentCard mattCard = new PaymentCard(30);
 
-    paulCard.eatHeartily();
-    mattCard.eatAffordably();
+        Timer timer = new Timer();
 
-    System.out.println("Paul: " + paulCard.toString());
-    System.out.println("Matt: " + mattCard.toString());
+        while (true) {
+        System.out.println(timer);
+        timer.advance();
 
-    paulCard.addMoney(20);
-    mattCard.eatHeartily();
+        try {
+            Thread.sleep(10);
+        } catch (Exception e) {
 
-    System.out.println("Paul: " + paulCard.toString());
-    System.out.println("Matt: " + mattCard.toString());
-
-    paulCard.eatAffordably();
-    paulCard.eatAffordably();
-
-    mattCard.addMoney(151);
-    
-
-    System.out.println("Paul: " + paulCard.toString());
-    System.out.println("Matt: " + mattCard.toString());
+        }
+        }
     }
-    
+
 }
