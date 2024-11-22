@@ -5,36 +5,31 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
 
-        Statistic statistic = new Statistic();
-        Statistic even = new Statistic();
-        Statistic odd = new Statistic();
+    PaymentCard paulCard = new PaymentCard(20);
+    PaymentCard mattCard = new PaymentCard(30);
 
-        System.out.println("Enter number:");
+    paulCard.eatHeartily();
+    mattCard.eatAffordably();
 
-        while (true) {
-            int num = scanner.nextInt();
+    System.out.println("Paul: " + paulCard.toString());
+    System.out.println("Matt: " + mattCard.toString());
 
-            if (num == -1) {
-                break;
-            }
-            statistic.addNumber(num);
+    paulCard.addMoney(20);
+    mattCard.eatHeartily();
 
-            if (num % 2 == 0) {
-                even.addNumber(num);
-            } 
-            else {
-                odd.addNumber(num);
-            }
+    System.out.println("Paul: " + paulCard.toString());
+    System.out.println("Matt: " + mattCard.toString());
 
-        }
-        System.out.println("Count:" + statistic.count());
-        System.out.println("Average:"+ statistic.average());
-        System.out.println("Sum: " + statistic.sum());
-        System.out.println("Sum of even numbers: " + even.sum());
-        System.out.println("Sum of odd numbers: " + odd.sum());
+    paulCard.eatAffordably();
+    paulCard.eatAffordably();
 
+    mattCard.addMoney(151);
+    
+
+    System.out.println("Paul: " + paulCard.toString());
+    System.out.println("Matt: " + mattCard.toString());
     }
-
+    
 }
