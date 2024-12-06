@@ -51,7 +51,6 @@ public class Person {
         return this.weight / (heightPerHundred * heightPerHundred);
     }
 
-    @Override
     public String toString() {
         return this.name + ", age " + this.age + " years";
     }
