@@ -1,6 +1,6 @@
 package lv.rvt;
 
-class Box {
+class Box{
     
     public double length;
     public double width;
@@ -8,13 +8,12 @@ class Box {
 
 
     public Box(double length, double width, double height){
-        this.length = length;
+         this.length = length;
         this.width = width;
         this.height = height;
     }
 
-
-
+        
 private double faceArea(){
 double face = this.height * this.width;
     return face;
@@ -27,9 +26,10 @@ return top;
 
 private double sideArea(){
 double side = this.length*this.height;
-return side;
+    return side;
 }
-
+    
+ 
 public double area()
 {
   return 2 * faceArea() + 2 * topArea() + 2 * sideArea() ;              
@@ -48,10 +48,9 @@ public  Box(Box oldBox) {
 }
 
 
-
-
 public Box biggerBox( Box oldBox){
     return new Box (1.25*oldBox.width,1.25*oldBox.height,1.25*oldBox.length);
 }
+
 
 }
