@@ -16,7 +16,6 @@ package lv.rvt;
 		return this.weight;
 	};
 
-    
 	public String toString() {
 		return this.author + ": " + this.name;
 	}
